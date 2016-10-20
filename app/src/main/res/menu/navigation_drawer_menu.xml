@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_green"
+            android:icon="@mipmap/topmenu_icn_msg"
+            android:title="我的信息" />
+        <item
+            android:id="@+id/item_blue"
+            android:icon="@mipmap/topmenu_icn_store"
+            android:title="积分商城" />
+        <item
+            android:id="@+id/item_pink"
+            android:icon="@mipmap/topmenu_icn_member"
+            android:title="付费音乐包" />
+    </group>
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/subitem_01"
+            android:icon="@mipmap/topmenu_icn_identify"
+            android:title="听歌识曲" />
+        <item
+            android:id="@+id/subitem_02"
+            android:icon="@mipmap/topmenu_icn_skin"
+            android:title="主题换肤" />
+        <item
+            android:id="@+id/subitem_03"
+            android:icon="@mipmap/topmenu_icn_night"
+            android:title="夜间模式" />
+        <item
+            android:id="@+id/subitem_004"
+            android:icon="@mipmap/topmenu_icn_time"
+            android:title="定时停止播放" />
+        <item
+            android:id="@+id/subitem_005"
+            android:icon="@mipmap/topmenu_icn_clock"
+            android:title="音乐闹钟" />
+        <item
+            android:id="@+id/subitem_006"
+            android:icon="@mipmap/topmenu_icn_vehicle"
+            android:title="驾驶模式" />
+    </group>
+
+    <item android:title="SubItems">
+        <menu>
+            <item
+                android:id="@+id/subitem_04"
+                android:icon="@mipmap/ic_launcher"
+                android:title="SubItem04" />
+            <item
+                android:id="@+id/subitem_05"
+                android:icon="@mipmap/ic_launcher"
+                android:title="SubItem05" />
+            <item
+                android:id="@+id/subitem_06"
+                android:icon="@mipmap/ic_launcher"
+                android:title="SubItem06" />
+            <item
+                android:id="@+id/subitem_07"
+                android:title="" />
+        </menu>
+    </item>
+</menu>
