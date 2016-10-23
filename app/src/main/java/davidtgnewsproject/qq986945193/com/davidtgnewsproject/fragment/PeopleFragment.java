@@ -24,6 +24,7 @@ import davidtgnewsproject.qq986945193.com.davidtgnewsproject.utils.LogUtil;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.utils.OkHttpUtils;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.utils.PicassoWithImageUtils;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.utils.XListviewAndTimeUtils;
+import davidtgnewsproject.qq986945193.com.davidtgnewsproject.view.AutoLoadMoreListView;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.view.XListView;
 import okhttp3.Response;
 
@@ -34,7 +35,7 @@ import okhttp3.Response;
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
-public class PeopleFragment extends Fragment {
+public class PeopleFragment extends Fragment implements AutoLoadMoreListView.OnLoadMoreListener {
     private String id;
 
     public PeopleFragment(String id) {
@@ -47,6 +48,8 @@ public class PeopleFragment extends Fragment {
     private List<TopListBean.TngouBean> mLists = new ArrayList<>();
     private OkHttpUtils okHttpUtils = MyApplication.getApp().getOkHttpUtils();
     private MyAdapter myAdapter;
+
+    private AutoLoadMoreListView auto_listview;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,6 +70,7 @@ public class PeopleFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        auto_listview = (AutoLoadMoreListView) rootView.findViewById(R.id.auto_listview);
         xlv_people = (XListView) rootView.findViewById(R.id.xlv_people);   // 支持下拉刷新
         xlv_people.setPullRefreshEnable(true);
         // 支持滚动加载
@@ -81,8 +85,25 @@ public class PeopleFragment extends Fragment {
         xlv_people.setXListViewListener(listener);
 
         isInit = true;
-        xlv_people.setAdapter(myAdapter);
+//        xlv_people.setAdapter(myAdapter);
+        auto_listview.setAdapter(myAdapter);
+        auto_listview.setOnLoadMoreListener(this);
+    }
 
+    private boolean isEnd = true;
+
+    /**
+     * 加载更过的监听方法
+     */
+    @Override
+    public void onLoadMore() {
+
+        if (isEnd) {
+            page++;
+            getData();
+        } else {
+            auto_listview.showLoadComplete();
+        }
     }
 
     class MyIXListViewListener implements XListView.IXListViewListener {
@@ -105,17 +126,38 @@ public class PeopleFragment extends Fragment {
     }
 
     private void getData() {
-        String url = Urls.TOP_LIST + "?id=" + id + "&page=" + page + "&rows=" + "10";
+        String url = Urls.TOP_LIST + "?id=" + id + "&page=" + page + "&rows=" + "20";
         okHttpUtils.get(url, null, new OkHttpStopCallback<TopListBean>() {
 
             @Override
             public void onSuccess(Response response, TopListBean topListBean) {
                 if (topListBean != null) {
-                    mLists.addAll(topListBean.getTngou());
-                    LogUtil.E("size" + mLists.size());
-                    myAdapter.notifyDataSetChanged();
+                    if (topListBean.getTngou() != null) {
+                        mLists.addAll(topListBean.getTngou());
+                        LogUtil.E("size" + mLists.size());
+                        myAdapter.notifyDataSetChanged();
+                        auto_listview.onLoadMoreComplete();
+
+                        if (page == 1) {
+                            if (mLists.size() < 20) {
+                                isEnd = false;
+                                auto_listview.showLoadComplete();
+                            }
+
+                        } else {
+                            if (topListBean.getTngou().size() < 20) {
+                                isEnd = false;
+                                auto_listview.showLoadComplete();
+                            }
+                        }
+
+                    } else {
+                        isEnd = false;
+                        auto_listview.showLoadComplete();
+                    }
                 }
-                XListviewAndTimeUtils.stopWait(xlv_people);
+
+//                XListviewAndTimeUtils.stopWait(xlv_people);
             }
         });
     }
@@ -137,7 +179,7 @@ public class PeopleFragment extends Fragment {
 
     private void showData() {
         if (isInit) {
-            isInit = true;// 加载数据完成
+            isInit = false;// 加载数据完成
             page = 1;
             mLists.clear();
             getData();
