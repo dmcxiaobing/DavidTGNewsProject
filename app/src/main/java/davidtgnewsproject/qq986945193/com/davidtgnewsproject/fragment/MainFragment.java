@@ -30,7 +30,7 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View inflate = inflater.inflate(R.layout.fragment_two, container, false);
+        View inflate = inflater.inflate(R.layout.fragment_three, container, false);
 
         TextView viewById = (TextView) inflate.findViewById(R.id.tv);
         viewById.setText(title);

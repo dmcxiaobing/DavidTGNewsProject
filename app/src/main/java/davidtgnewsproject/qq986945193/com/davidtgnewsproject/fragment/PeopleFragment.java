@@ -36,11 +36,6 @@ import okhttp3.Response;
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
 public class PeopleFragment extends Fragment implements AutoLoadMoreListView.OnLoadMoreListener {
-    private String id;
-
-    public PeopleFragment(String id) {
-        this.id = id;
-    }
 
     private XListView xlv_people;
     private View rootView;
@@ -126,7 +121,7 @@ public class PeopleFragment extends Fragment implements AutoLoadMoreListView.OnL
     }
 
     private void getData() {
-        String url = Urls.TOP_LIST + "?id=" + id + "&page=" + page + "&rows=" + "20";
+        String url = Urls.TOP_LIST + "?id=1" + "&page=" + page + "&rows=" + "20";
         okHttpUtils.get(url, null, new OkHttpStopCallback<TopListBean>() {
 
             @Override

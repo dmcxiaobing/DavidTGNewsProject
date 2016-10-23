@@ -49,6 +49,8 @@ public class OneFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,7 +68,7 @@ public class OneFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initView(rootView);
-        myAdapter = new MyAdapter(getActivity().getSupportFragmentManager());
+        myAdapter = new MyAdapter(getChildFragmentManager());
 
         mviewPager.setAdapter(myAdapter);
 

@@ -1,26 +1,21 @@
 package davidtgnewsproject.qq986945193.com.davidtgnewsproject;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.MainFragment;
+import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.FourFragment;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.PeopleFragment;
-import davidtgnewsproject.qq986945193.com.davidtgnewsproject.utils.LogUtil;
+import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.ThreeFragment;
+import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.TwoFragment;
 
 /**
  * @author ：程序员小冰
@@ -47,15 +42,15 @@ public class TGActivity extends FragmentActivity{
         stringList.add("财经热点");
         stringList.add("体育热点");
 
-        fragmentList.add(new PeopleFragment("1"));
-        fragmentList.add(new MainFragment("2"));
-        fragmentList.add(new MainFragment("3"));
-        fragmentList.add(new MainFragment("4"));
+        fragmentList.add(new TwoFragment());
+        fragmentList.add(new PeopleFragment());
+        fragmentList.add(new ThreeFragment());
+        fragmentList.add(new FourFragment());
         myAdapter = new MyAdapter(getSupportFragmentManager());
 
         mviewPager.setAdapter(myAdapter);
 
-
+        mviewPager.setOffscreenPageLimit(3);
         mTabLayout.setupWithViewPager(mviewPager);
 
 
