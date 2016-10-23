@@ -50,7 +50,7 @@ public class PeopleFragment extends Fragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        myAdapter = new MyAdapter(getActivity(),mLists);
+        myAdapter = new MyAdapter(getActivity(), mLists);
 
         super.onCreate(savedInstanceState);
     }
@@ -128,21 +128,17 @@ public class PeopleFragment extends Fragment {
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         // 每次切换fragment时调用的方法
-        LogUtil.E("setUserVisibleHint");
         // 相当于Fragment的onResume
         if (isVisibleToUser) {
             LogUtil.E("setUserVisibleHint22");
-
             showData();
         }
     }
 
     private void showData() {
-
         if (isInit) {
-            isInit = false;// 加载数据完成
+            isInit = true;// 加载数据完成
             page = 1;
-
             mLists.clear();
             getData();
 
@@ -158,7 +154,7 @@ public class PeopleFragment extends Fragment {
 
         // 判断当前fragment是否显示
         if (getUserVisibleHint()) {
-            isInit = false;
+            isInit = true;
             LogUtil.E("onresume222");
             showData();
         }
