@@ -3,13 +3,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <davidtgnewsproject.qq986945193.com.davidtgnewsproject.view.XListView
-        android:id="@+id/xlv_people"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="match_parent" />
-    <davidtgnewsproject.qq986945193.com.davidtgnewsproject.view.AutoLoadMoreListView
-        android:id="@+id/auto_listview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+
 </LinearLayout>
