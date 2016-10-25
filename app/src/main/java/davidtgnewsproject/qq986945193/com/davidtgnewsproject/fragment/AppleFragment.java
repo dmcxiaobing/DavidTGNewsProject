@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.R;
+import davidtgnewsproject.qq986945193.com.davidtgnewsproject.bean.AppleBean;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.bean.SportsBean;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.callback.OkHttpStopCallback;
 import davidtgnewsproject.qq986945193.com.davidtgnewsproject.constants.Urls;
@@ -37,7 +38,7 @@ import okhttp3.Response;
 /**
  * 体育热线fragment
  */
-public class SportsFragment extends BaseListFragment<SportsBean.NewslistBean> {
+public class AppleFragment extends BaseListFragment<AppleBean.NewslistBean> {
     //页数
     int pageIndex = 1;
     private int random;
@@ -81,28 +82,27 @@ public class SportsFragment extends BaseListFragment<SportsBean.NewslistBean> {
     @Override
     public void onRefresh(final int action) {
         if (mDataList == null) {
-            mDataList = new ArrayList<SportsBean.NewslistBean>();
+            mDataList = new ArrayList<AppleBean.NewslistBean>();
         }
 
         if (action == PullRecycler.ACTION_PULL_TO_REFRESH) {
             pageIndex = 1;
         } else if (action == PullRecycler.ACTION_LOAD_MORE_REFRESH) {
             pageIndex ++;
-
         }
-        String url = Urls.SPORTS + "?num=15" + "&page=" + pageIndex;
+        String url = Urls.APPLE + "?num=15" + "&page=" + pageIndex;
         if (isAdded()) {
-            okHttpUtils.get(url, null, new OkHttpStopCallback<SportsBean>() {
+            okHttpUtils.get(url, null, new OkHttpStopCallback<AppleBean>() {
 
                 @Override
-                public void onSuccess(Response response, SportsBean mSportsBean) {
-                    if (mSportsBean != null) {
-                        if (mSportsBean.getNewslist() != null) {
+                public void onSuccess(Response response, AppleBean mAppleBean) {
+                    if (mAppleBean != null) {
+                        if (mAppleBean.getNewslist() != null) {
                             if (action == PullRecycler.ACTION_PULL_TO_REFRESH) {
                                 mDataList.clear();
                             }
                             recycler.enableLoadMore(true);
-                            mDataList.addAll(mSportsBean.getNewslist());
+                            mDataList.addAll(mAppleBean.getNewslist());
                             adapter.notifyDataSetChanged();
 
 

@@ -8,5 +8,7 @@ package davidtgnewsproject.qq986945193.com.davidtgnewsproject.constants;
  */
 public class Urls {
     public static final String SPORTS = "http://apis.baidu.com/txapi/tiyu/tiyu";
+    public static final String TECH = "http://apis.baidu.com/txapi/keji/keji";
+    public static final String APPLE = "http://apis.baidu.com/txapi/apple/apple";
 
 }
