@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment;
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
-public class PeopleFragment extends Fragment {
+public class SportsFragment extends Fragment {
 
 
 }

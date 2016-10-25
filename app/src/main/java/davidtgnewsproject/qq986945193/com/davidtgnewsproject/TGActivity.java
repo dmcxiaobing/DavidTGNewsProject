@@ -12,7 +12,7 @@ import android.support.v4.view.ViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
-import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.PeopleFragment;
+import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.SportsFragment;
 
 /**
  * @author ：程序员小冰
@@ -22,7 +22,7 @@ import davidtgnewsproject.qq986945193.com.davidtgnewsproject.fragment.PeopleFrag
  * <p/>
  * 项目名称：小冰新闻
  */
-public class TGActivity extends FragmentActivity{
+public class TGActivity extends FragmentActivity {
     private List<String> stringList = new ArrayList<>();
     private List<Fragment> fragmentList = new ArrayList<>();
     private TabLayout mTabLayout;
@@ -34,14 +34,15 @@ public class TGActivity extends FragmentActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tg);
         initView();
-        stringList.add("民生热点");
-        stringList.add("娱乐热点");
-        stringList.add("财经热点");
-        stringList.add("体育热点");
+        stringList.add("国际在线");
+        stringList.add("科技创新");
+        stringList.add("果粉新闻");
+        stringList.add("体育热线");
 
-        fragmentList.add(new PeopleFragment());
-        fragmentList.add(new PeopleFragment());
-        fragmentList.add(new PeopleFragment());
+        fragmentList.add(new SportsFragment());
+        fragmentList.add(new SportsFragment());
+        fragmentList.add(new SportsFragment());
+        fragmentList.add(new SportsFragment());
         myAdapter = new MyAdapter(getSupportFragmentManager());
 
         mviewPager.setAdapter(myAdapter);
