@@ -57,11 +57,6 @@ public class TGActivity extends FragmentActivity {
         mTabLayout.setTabsFromPagerAdapter(myAdapter);
     }
 
-    private void initView() {
-        mTabLayout = (TabLayout) findViewById(R.id.mTabLayout);
-        mviewPager = (ViewPager) findViewById(R.id.mViewPager);
-    }
-
 
     class MyAdapter extends FragmentStatePagerAdapter {
 
@@ -84,5 +79,12 @@ public class TGActivity extends FragmentActivity {
             return stringList.get(position);
         }
     }
+
+    private void initView() {
+        mTabLayout = (TabLayout) findViewById(R.id.mTabLayout);
+        mviewPager = (ViewPager) findViewById(R.id.mViewPager);
+    }
+
+
 
 }
