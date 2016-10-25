@@ -36,7 +36,7 @@ import okhttp3.Response;
  */
 
 /**
- * 体育热线fragment
+ * 科技创新fragment
  */
 public class TechFragment extends BaseListFragment<TechBean.NewslistBean> {
     //页数

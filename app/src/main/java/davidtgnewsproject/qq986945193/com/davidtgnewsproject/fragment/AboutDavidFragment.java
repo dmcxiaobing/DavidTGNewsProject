@@ -15,6 +15,10 @@ import davidtgnewsproject.qq986945193.com.davidtgnewsproject.R;
  * @GitHub: https://github.com/QQ986945193
  * @CSDN博客: http://blog.csdn.net/qq_21376985
  */
+
+/**
+ * 关于作者
+ */
 public class AboutDavidFragment extends Fragment {
     private View rootView;
     @Nullable

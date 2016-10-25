@@ -36,7 +36,7 @@ import okhttp3.Response;
  */
 
 /**
- * 体育热线fragment
+ * 果粉新闻fragment
  */
 public class AppleFragment extends BaseListFragment<AppleBean.NewslistBean> {
     //页数
