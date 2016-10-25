@@ -19,4 +19,14 @@
     <style name="RecyclerItemViewStyle">
         <item name="android:background">?android:attr/selectableItemBackground</item>
     </style>
+
+
+    <!-- 圆形ImageView  RoundImageView所需要的Style-->
+    <declare-styleable name="RoundImageView">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color" />
+    </declare-styleable>
+
+
 </resources>
