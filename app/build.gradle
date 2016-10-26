@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "davidtgnewsproject.qq986945193.com.davidtgnewsproject"
-        minSdkVersion 15
+        minSdkVersion 8
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -29,7 +29,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    /*使用一款开源的loading框架，要求最低sdk == 15*/
-    compile 'com.github.d-max:spots-dialog:0.7@aar'
 
 }
