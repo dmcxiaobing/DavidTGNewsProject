@@ -8,6 +8,8 @@
 
 [点击从OSChina进行下载](http://git.oschina.net/MCXIAOBING/DavidTGNewsProject)
 
+[OSChina向我提问](https://www.oschina.net/p/davidtgnewsproject)
+
 (原创作品，转载请说明出处)先给大家看一下效果图： 
 
 ![这里写图片描述](http://img.blog.csdn.net/20161026111546696)
