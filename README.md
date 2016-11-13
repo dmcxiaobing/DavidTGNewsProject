@@ -32,7 +32,7 @@
 
 4,以及V7包下的cardview,recycleView,design,Tablayout
 
-5,百度APIstore(所用接口)
+5,百度APIstore(所用部分接口)
 
 项目结构:
 
