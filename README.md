@@ -40,8 +40,8 @@
 
 项目为小冰所写，仅供参考，请勿用于任何商业。转载请说明出处。
 
-可以直接放在AndroidStudio开发工具中运行,
+可以直接放在AndroidStudio开发工具中运行,不然可能会报你的秘钥错误。
 
 记得将Constants类中的百度API秘钥改为自己的即可。
 
-欢迎star,fork，提出更好的建议。
+欢迎star,fork，提出更好的建议。copyright 程序员小冰
