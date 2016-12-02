@@ -8,6 +8,8 @@
 
 [点击从OSChina进行下载](http://git.oschina.net/MCXIAOBING/DavidTGNewsProject)
 
+[OSChina向我提问](https://www.oschina.net/p/davidtgnewsproject)
+
 (原创作品，转载请说明出处)先给大家看一下效果图： 
 
 ![这里写图片描述](http://img.blog.csdn.net/20161026111546696)
@@ -30,14 +32,16 @@
 
 4,以及V7包下的cardview,recycleView,design,Tablayout
 
-5,百度APIstore(所用接口)
+5,百度APIstore(所用部分接口)
 
 项目结构:
 
-![这里写图片描述](http://img.blog.csdn.net/20161026111112762)
+![项目结构的展示图](http://img.blog.csdn.net/20161026111112762)
 
 项目为小冰所写，仅供参考，请勿用于任何商业。转载请说明出处。
 
-可以直接放在AndroidStudio开发工具中运行,记得将Constants类中的百度API秘钥改为自己的即可。
+可以直接放在AndroidStudio开发工具中运行,不然可能会报你的秘钥错误。
 
-欢迎star,fork，提出更好的建议。
+记得将Constants类中的百度API秘钥改为自己的即可。
+
+欢迎star,fork，提出更好的建议。copyright 程序员小冰
