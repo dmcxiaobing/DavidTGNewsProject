@@ -58,11 +58,11 @@ public class OkHttpUtils {
 
     //采用单例模式获取对象
     public static OkHttpUtils getInstance() {
+
         if (mOkHttputils == null) {
             synchronized (OkHttpUtils.class) {
                 if (mOkHttputils == null) {
                     mOkHttputils = new OkHttpUtils();
-                   
                 }
             }
         }
