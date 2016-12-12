@@ -45,3 +45,5 @@
 记得将Constants类中的百度API秘钥改为自己的即可。
 
 欢迎star,fork，提出更好的建议。copyright 程序员小冰
+
+[安卓利器开源项目](https://github.com/QQ986945193/DavidAndroidProjectTools)
