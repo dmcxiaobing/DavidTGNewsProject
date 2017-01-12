@@ -46,14 +46,18 @@ public class TGActivity extends FragmentActivity {
         fragmentList.add(new TechFragment());
         fragmentList.add(new AppleFragment());
         fragmentList.add(new AboutDavidFragment());
+
+        /**
+         * viewpager
+         */
         myAdapter = new MyAdapter(getSupportFragmentManager());
-
         mviewPager.setAdapter(myAdapter);
-
+        //设置预加载
         mviewPager.setOffscreenPageLimit(3);
+        //绑定ViewPager
         mTabLayout.setupWithViewPager(mviewPager);
 
-
+        //TabLayout绑定adapter
         mTabLayout.setTabsFromPagerAdapter(myAdapter);
     }
 
