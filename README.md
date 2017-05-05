@@ -42,7 +42,7 @@
 
 可以直接放在AndroidStudio开发工具中运行,不然可能会报你的秘钥错误。
 
-记得将Constants类中的百度API秘钥改为自己的即可。
+记得将Constants类中的百度API秘钥改为自己的即可。或者将里面的接口数据换成你自己的接口数据内容。
 
 欢迎star,fork，提出更好的建议。copyright 程序员小冰
 
