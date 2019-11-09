@@ -12,11 +12,13 @@
 
 (原创作品，转载请说明出处)先给大家看一下效果图： 
 
-![这里写图片描述](http://img.blog.csdn.net/20161026111546696)
+![这里写图片描述](https://mcxiaobing.gitee.io/blog/img/github/DavidTGNewsProject/0.png)
 
-![这里写图片描述](http://img.blog.csdn.net/20161026104303501)
+![这里写图片描述](https://mcxiaobing.gitee.io/blog/img/github/DavidTGNewsProject/1.gif)
 
 这个项目总体来说虽然不是特别难，但是确实非常常用的功能。是业余时间自己写的一个小项目。
+
+有些资源是拷贝网络，如果您觉得我侵犯了您的权益，请告诉我，我立刻删除。
 
 以前我们写的时候一般都是自己写tab或者引用一个著名的库Indicator，
 
@@ -36,14 +38,14 @@
 
 项目结构:
 
-![项目结构的展示图](http://img.blog.csdn.net/20161026111112762)
+![项目结构的展示图](https://mcxiaobing.gitee.io/blog/img/github/DavidTGNewsProject/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313631303236313131313132373632.png)
 
-项目为小冰所写，仅供参考，请勿用于任何商业。转载请说明出处。
+项目为小冰所写，仅供参考，使用商业造成任何损失，本人概不负责。转载请说明出处。
 
-可以直接放在AndroidStudio开发工具中运行,不然可能会报你的秘钥错误。
+可以直接放在AndroidStudio开发工具中运行。
 
 记得将Constants类中的百度API秘钥改为自己的即可。或者将里面的接口数据换成你自己的接口数据内容。
 
-欢迎star,fork，提出更好的建议。copyright 程序员小冰
+欢迎star,fork，提出更好的建议。
 
 [安卓利器开源项目](https://github.com/QQ986945193/DavidAndroidProjectTools)
